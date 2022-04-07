@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css background maker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-X3Q1X614MD"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-X3Q1X614MD');
+	</script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="logo_head">
+		<a href="https://twitter.com/AbbyPTsai">
+			FeedBack
+		</a>
+	</div>
+    <div id="card">
+		<div id="mainlogo"><h1>Life Style</h1><img src="img/abby.png" alt="" height="30" width="45"><div id="egg">8 lucky eggs</div></div>
+		<div id="tool">
+        <h6>visual background tool</h6>	
+		<h5>
+			1. make a choice.<br>
+			2. click copy, paste then to CSS.<br> 
+		</h5>
+		</div>
+	</div> 
+	<div id="inputarea">
+		<div class="backgroundinput">
+			<input type="radio" id="option1" value="" onclick=inputclick(this)>
+			<label for="choice1">option1</label>					
+		</div>
+		<div class="backgroundinput">
+			<input type="radio" id="option2" value="" onclick=inputclick(this)>
+			<label for="choice2">option2</label>		
+		</div>
+		<div class="backgroundinput">
+			<input type="radio" id="option3" value="" onclick=inputclick(this)>
+			<label for="choice2">option3</label>			
+		</div>
+		<div class="backgroundinput">
+			<input type="radio" id="option4" value="" onclick=inputclick(this)>
+			<label for="choice2">option4</label>				
+		</div>
+		<div class="backgroundinput">
+			<input type="radio" id="option5" value="" onclick=inputclick(this)>
+			<label for="choice2">option5</label>			
+		</div>
+		<div class="backgroundinput">
+			<input type="radio" id="option6" value="" onclick=inputclick(this)>
+			<label for="choice2">option6</label>			
+		</div>
+		<div class="backgroundinput">
+			<input type="radio" id="option7" value="" onclick=inputclick(this)>
+			<label for="choice2">option7</label>			
+		</div>
+		<div class="backgroundinput">
+			<input type="radio" id="option8" value="" onclick=inputclick(this)>
+			<label for="choice2">option8</label>			
+		</div>
+		<div id="picture"></div>
+		<button id="secondbutton" onclick="copy(this)">copy</button>
+	</div>
+	<div>Inspired by <a href="https://www.conic.style/">conic.css.</a> Huge thanks.</div>
+	<div class="footer">copyright 2022 @AbbyTsai</div>
+    <script src="main.js"></script>
+</body>
+</html>

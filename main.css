@@ -1,0 +1,189 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    text-align: center;
+}
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 72px;
+    font-weight: bolder;
+}
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5em;
+}
+.footer {
+    background: lightblue;
+    text-align: center;
+    font-size: 12px;
+}
+.logo_head {
+    width: 8em;
+    height: 2em;
+    background: pink;;
+    position: fixed;
+    top: 2em;
+    right: -1em;
+    font-size: 12px;
+    transform: rotateZ(45deg);
+    border: 3px solid gray;
+}
+.logo_head a, a {
+    text-decoration: none;
+}
+#mainlogo{
+    position: relative;
+    margin-bottom: -3em;
+}
+#mainlogo img{
+    position: absolute;
+    right: -25px;
+    top: 8px;
+}
+
+.backgroundinput{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border:20px solid black;
+	width: 105%;
+    height: 125%;
+    flex-direction: column;		
+}
+
+.backgroundinput:nth-child(1){
+	grid-area: AC;
+	animation:up 3s 4s 1 forwards;
+}
+.backgroundinput:nth-child(2){
+	grid-area: BB;
+	animation:up 3s 2s 1 forwards;
+}
+.backgroundinput:nth-child(3){
+	grid-area: BD;
+	animation:up 3s 6s 1 forwards;
+}
+.backgroundinput:nth-child(4){
+	grid-area: CA;
+	border-radius:51% 65% 65% 96% / 22% 32% 28% 64%;
+	transform: scale(1.3) translate(-12px);
+}
+.backgroundinput:nth-child(5){
+	grid-area: CE;
+	border-radius:43% 60% 51% 73% / 59% 90% 87% 22%;
+	transform: scale(1.3) translate(10px);
+}
+.backgroundinput:nth-child(6){
+	grid-area: DB;
+	animation:down 3s 2s 1 forwards;
+}
+.backgroundinput:nth-child(7){
+	grid-area: DD;
+	animation:down 3s 6s 1 forwards;
+}
+.backgroundinput:nth-child(8){
+	grid-area: EC;
+	animation:down 3s 4s 1 forwards;
+}
+.backgroundinput:nth-child(-n+3){
+	border-radius:66% 54% 74% 32% / 80% 42% 12% 4%;
+	transform: translateY(40px);
+}
+@keyframes up{
+	0%{transform: translateY(40px);}
+	20%{transform: rotate(-10deg) translateY(40px);}
+	30%{transform: rotate(10deg) translateY(40px);}
+	40%{transform: rotate(0deg) translateY(40px);}
+	100%{transform: translateY(-23px);}
+}
+@keyframes down{
+	0%{transform: translateY(-70px);}
+	20%{transform: rotate(10deg) translateY(-70px);}
+	30%{transform: rotate(-10deg) translateY(-70px);}
+	40%{transform: rotate(0deg) translateY(-70px);}
+	100%{transform: translateY(15px);}
+}
+.backgroundinput:nth-child(n+6){
+	border-radius:10% 3% 85% 35% / 22% 77% 85% 60%;
+	transform: translateY(-70px);
+}
+#picture{
+	grid-area: BC;
+	transform: scale(1.1, 1.2);
+    z-index: -1;
+    position: relative;
+    top: 0.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: lightblue;
+}
+#secondbutton:hover{
+	background: white;
+}
+#secondbutton{
+	background: hotpink;
+	width:70px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lobster', cursive;
+    position: relative;
+    left: 45%;
+    bottom: -95%;
+    grid-area:BC;
+    z-index: -1;
+}
+.backgroundinput input{
+	height:100%;
+	width:100%;
+	appearance: none;
+	position: relative;
+}
+.backgroundinput label{
+	display: none;
+}
+#egg{
+	position: relative;
+	top: -60px;
+    font-size: 10px;
+    right: -200px;
+    transform:rotate(-25deg);
+    font-family: 'Lobster', cursive;
+    font-size: 48px;
+}
+#inputarea{
+	display: grid;
+    grid-template-columns: 100px repeat(3, calc(100vw/5)) 100px;
+    width: 100vw;
+    height: 100vh;
+    grid-template-rows: 10px 140px 140px 140px 10px;
+    grid-template-areas: 
+    'AA AB AC AD AE'
+    'BA BB AC BD BE'
+    'CA BC BC BC CE'
+    'DA DB EC DD DE'
+    'EA EB EC ED EE';
+    justify-content: center;
+    margin-top:1.5em;
+}
+@media screen and (max-width:480px){
+    #inputarea{
+        display: grid;
+        grid-template-columns: 50px repeat(3, calc(100vw/5)) 50px;
+        width: 100vw;
+        height: 100vh;
+        grid-template-rows: 10px 140px 140px 140px 10px;
+        grid-template-areas: 
+        'AA AB AC AD AE'
+        'BA BB AC BD BE'
+        'CA BC BC BC CE'
+        'DA DB EC DD DE'
+        'EA EB EC ED EE';
+        justify-content: center;
+        margin-top:1.5em;
+    } 
+}
